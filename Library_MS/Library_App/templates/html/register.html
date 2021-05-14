@@ -1,0 +1,34 @@
+{% extends 'html/base.html' %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+ 
+<div class="container">
+	<div class="card col-md-6 mx-auto mt-4 shadow-lg">
+		<h3 class="bg-warning text-center mt-3 my-3 text-dark p-2 border rounded">Registration</h3>
+		<div class="card-body">
+			<form method="POST">
+				{% csrf_token %}
+				<table class="table table-borderless">
+					{% for k in u %}
+					<tr>
+						<td>
+							{{k}}
+						</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<div class="row">
+						
+						<div class="col">
+							<input type="Submit" class="form-control btn btn-success col-sm" name="subscribe">
+						</div>
+						<div class="col">
+							<a href="{% url 'log' %}" class="form-control btn btn-info col-sm">Existing User</a>
+						</div>
+					</div>
+			</form>
+			<!--<form>{{u.as_p}}</form>-->
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'html/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-6 mx-auto mt-4 shadow-lg">
+		<h4 class="p-3 bg-dark text-center text-white mt-3 border rounded">LOGOUT</h4>
+		<div class="card-body">
+			<h2>Successfully Logged Out</h2>
+			<h3>You need to Login again click here <a href="{% url 'log' %}" class="form-contol btn btn-info my-2">Proceed</a></h3>
+		</div>
+	</div>
+</div>
+{% endblock %}

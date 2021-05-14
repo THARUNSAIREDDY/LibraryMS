@@ -1,0 +1,56 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %}allnotes{% endblock %}
+
+{% block content %}
+<script>
+	$(document).on('click', '.confirm-delete', function(){
+    return confirm('Are you sure you want to delete this?');
+})
+	$(document).on('click', '.confirm-accept', function(){
+    return confirm('Are you sure you want to accept this?');
+})
+	$(document).on('click', '.confirm-reject', function(){
+    return confirm('Are you sure you want to reject this?');
+})
+</script>
+<div class="text-center text-danger">
+	<br>
+	<span><i>View Accepted Notifications</i></span>
+	
+</div>
+<hr>
+
+<div class="container">
+	<table class="table table-bordered">
+		<input type="button" value="Go back!" onclick="history.back()" class="btn btn-info">
+		<tr class="bg bg-info">
+			<td>S.No</td>
+			<td>Rg_No</td>
+			<td>Name</td>
+			<td>Book_Name</td>
+			<td>Book_Author</td>
+
+			<td>Action</td>
+			<td>Delete</td>
+		</tr>
+		{% for i in p %}
+		{% if i.issue_status is 1 %}
+		<tr>
+			<td>{{forloop.counter}}</td>
+			<td>{{i.Rg_No}}</td>
+			<td>{{i.Name}}</td>	
+			<td>{{i.Book_name}}</td>
+			<td>{{i.Book_author}}</td>
+			{% if i.issue_status is 1 %}
+			<td class="bg-success">Accepted</td>
+			{% endif %}
+			<td><a class="confirm-delete btn btn-warning" href="{% url 'datadelete' i.id %}">Delete</a></td>
+		</tr>
+		
+		{% endif %}
+		{% endfor %}
+	</table>
+</div>
+
+{% endblock %}

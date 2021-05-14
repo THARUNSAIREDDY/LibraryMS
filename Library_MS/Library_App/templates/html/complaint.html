@@ -1,0 +1,16 @@
+{% extends 'html/base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<div class="container">
+	 <form method="post">
+	 	{% csrf_token %}
+	 	<div class="card mt-5 col-md-4">
+	 	 <div class="card-header bg-info">Complaint details</div>
+	 	 <div class="card-body bg-light">
+	 	{{p.as_p}}
+	 	<input type="submit" value="post">
+	 </div>
+	</div>
+	 </form>
+</div>
+{% endblock %}

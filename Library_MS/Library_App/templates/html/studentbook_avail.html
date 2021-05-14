@@ -1,0 +1,20 @@
+{% extends 'html/base.html' %}
+{% block title %}Available_books{% endblock %}
+{% block content %}
+<div class=" mx-auto card col-md-8 container-fluid" style="margin-top:60px"><h4 class="p-3 bg-success text-center mt-3 border rounded ">Available Books</h4>
+			<table class="table">
+				<tr class="bg-dark text-light">
+					<td>Book_Name</td>
+					<td>Book_count</td>
+					<td>Book_Author</td>
+				</tr>
+					{% for i in t %}
+				<tr>
+				<td>{{i.Book_name}}</td>
+				<td>{{i.Book_count}}</td>
+				<td>{{i.Book_author}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+{% endblock %}

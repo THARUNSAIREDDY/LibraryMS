@@ -1,0 +1,38 @@
+{% extends 'html/base.html' %}
+{% block title %}##AdminPage##{% endblock %}
+{% block content %}
+<style>
+	.b:hover{
+		background-color: #99ff99;
+	}
+</style>
+<div class="container">
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-sm-3 mr-5 ml-5 card b" style="">
+  		  <div class="card-body">
+		    <h5 class="card-title">All Notifications</h5>
+		    <p>({{all}})</p>
+		    <a href="{% url 'notipending' %}" class="btn btn-primary">View</a>
+		  </div>
+		</div>
+		<div class="col-sm-3 card mr-5 b" style="">
+  		  <div class="card-body">
+		    <h5 class="card-title">Accepted Notifications</h5>
+		    <p>({{ac}})</p>
+		    <a href="{% url 'accepting' %}" class="btn btn-primary">View</a>
+		  </div>
+		</div>
+		<div class="col-sm-3 card mr-4 b" style="">
+  		  <div class="card-body">
+		    <h5 class="card-title">Rejected Notifications</h5>
+		   <p>({{a}})</p>
+		    <a href="{% url 'rejecting' %}" class="btn btn-primary">View</a>
+		  </div>
+		</div>
+		<div class="col-sm-"></div>
+	</div>
+	
+</div>
+
+
+{% endblock %}

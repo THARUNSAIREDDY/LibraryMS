@@ -1,0 +1,47 @@
+{% extends 'html/base.html' %}
+{% block title %}Available_books{% endblock %}
+{% block content %}
+<script>
+	
+	$(document).on('click', '.confirm-delete', function(){
+    return confirm('Are you sure you want to delete this?');
+})
+	$(document).on('click', '.confirm-edit', function(){
+    return confirm('Are you sure you want to Edit this?');
+})
+</script>
+<div class="container-fluid">
+	<div class="row">
+		<div class="card col-md-3 mt-3">
+			<h4 class="p-3 mx-2 bg-info text-center mt-3 border rounded">Add New books</h4>
+			<form method="POST">
+				{% csrf_token %}
+				<table class="table table-borderless">
+					{% for i in t1 %}
+					<tr>
+						<td>{{i}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<input type="submit" value="Add" class="text-center bg-info form-control my-2" name="">
+			</form>
+		</div>
+<div class=" mx-3 card col-md-8 mt-3"><h4 class="p-3 bg-info text-center mt-3 border rounded">Available Books</h4>
+			<table class="table table-borderless table-hover">
+				<tr class="bg-dark text-light">
+					<td>Book_Name</td>
+					<td>Book_count</td>
+					<td>Book_Author</td>
+					<td>Action</td>
+				</tr>
+					{% for i in t %}
+				<tr>
+				<td>{{i.Book_name}}</td>
+				<td>{{i.Book_count}}</td>
+				<td>{{i.Book_author}}</td>
+				<td><a class="confirm-delete btn btn-warning" href="{% url 'Bookdelete' i.id %}">Delete</a><a class="confirm-edit btn btn-dark ml-4" href="{% url 'Bookedit' i.id %}">Edit</a></td></td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+{% endblock %}

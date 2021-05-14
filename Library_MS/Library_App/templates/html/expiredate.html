@@ -1,0 +1,15 @@
+{% extends 'html/base.html' %}
+{% block title %}Available_books{% endblock %}
+{% block content %}
+<div class="container-fluid"style="margin-top:30px">
+	<div class="row">
+		<div class="card col-md-5 mx-auto">
+			<h4 class="p-3 bg-info text-center mt-3 border rounded">Issue and Expire Date</h4>
+			<form method="POST">
+				{% csrf_token %}
+				<input value="YYYY/MM/DD" type="date" class="form-control my-2" name="issue" placeholder="Search query">
+                <input value="YYYY/MM/DD" type="date" class="form-control my-4" name="Expire" placeholder="Number of results">
+				<input type="submit" value="Send" class="text-center bg-info form-control my-2" name="">
+			</form>
+		</div>
+{% endblock %}

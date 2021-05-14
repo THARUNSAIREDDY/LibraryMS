@@ -1,0 +1,21 @@
+{% extends 'html/base.html' %}
+{% block title %}Request{% endblock %}
+{% block content %}
+<div class="container mt-5">
+	<div class="card col-md-6 mx-auto mt-5 shadow-lg">
+		<h3 class="text-center text-white bg-info border rounded p-2 mt-2">Request Role</h3>
+		<div class="card-body">
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+		<input type="text" name="rollno" class="form-control my-3" placeholder="Enter your Roll Number">
+		<input type="text" name="dept" class="form-control my-4" placeholder="Enter your Department">
+		<input type="email" name="email" class="form-control my-4" placeholder="Enter your Mail">
+		<input type="text" name="ad" class="form-control my-4" placeholder="Enter your Address">
+		<input type="number" name="pn" class="form-control my-4" placeholder="Enter your Phone Number">
+		 <input type="submit" value="Send" class="btn btn-info text-white  col-sm">  
+		</form>
+	</div>
+</div>
+	
+</div>
+{% endblock %}

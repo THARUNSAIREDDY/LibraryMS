@@ -1,0 +1,22 @@
+{% extends 'html/base.html' %}
+{% block title %}Available_books{% endblock %}
+{% block content %}
+<div class="container-fluid"style="margin-top:30px">
+	<div class="row">
+		<div class="card col-md-5 mx-auto">
+			<h4 class="p-3 bg-info text-center mt-3 border rounded">Update Book Details</h4>
+			<form method="POST">
+				{% csrf_token %}
+				<table class="table table-borderless">
+				{% for i in us %}
+					<tr>
+						<td>{{i}}</td>
+					</tr>
+					{% endfor %}
+
+				</table>
+				<input type="submit" value="Send" class="text-center bg-info form-control my-2" name="">
+				
+			</form>
+		</div>
+{% endblock %}

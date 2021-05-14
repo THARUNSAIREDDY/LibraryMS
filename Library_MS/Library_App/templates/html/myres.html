@@ -1,0 +1,57 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %}allnotes{% endblock %}
+
+{% block content %}
+<script>
+	$(document).on('click', '.confirm-delete', function(){
+    return confirm('Are you sure you want to delete this?');
+})
+</script>
+<div class="text-center text-danger">
+	<br>
+	<span><i>View My Notes</i></span>
+	
+</div>
+<hr>
+
+<div class="container">
+	<table class="table table-bordered">
+		<input type="button" value="Go back!" class="btn btn-info" onclick="history.back()">
+		<tr class="bg bg-info">
+			<td>S.No</td>
+			
+			<td>Book_Name</td>
+			<td>Book_author</td>
+			<td>Status</td>
+			<td>Action</td>
+			
+		</tr>
+			
+				{% for i in data %}
+				<tr>
+					<td>{{forloop.counter}}</td>
+					<td>{{i.Book_name}}</td>
+					<td>{{i.Book_author}}</td>
+					
+					<!-- <td>{{i.is_status}}</td> -->
+					{% if i.issue_status is 0 %}
+					<td class="bg bg-warning">pending</td>
+					{% elif i.issue_status is 1 %}
+					<td class="bg bg-success">Acceptd</td>
+					{% elif i.issue_status is 2 %}
+					<td class="bg bg-danger">Rejected</td>
+					{% else %}
+					<td class="bg bg-danger">Notavailble</td>
+					{% endif %}
+					<td><a class="confirm-delete" href="{% url 'datadelete' i.id %}">Delete</a></td>
+					
+				</tr>
+			{% endfor %}
+			
+		
+			
+	</table>
+</div>
+
+{% endblock %}

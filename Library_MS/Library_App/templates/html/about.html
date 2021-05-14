@@ -1,0 +1,383 @@
+{% extends 'html/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!-- Background image -->
+
+
+
+<div style="background-image:url('https://images.all-free-download.com/images/graphicthumb/forest_513163.jpg');" >
+
+
+<!-- Background image -->
+<div class="container">
+  {% if messages %}
+       {% for j in messages %}
+         <div class="alert alert-{{j.tags}} alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+         {{j}}
+          
+
+
+       {% endfor %}
+  {% endif %}
+  <div class="row mt-4">
+    <div class="card col-md mx-2 text-center" style='background-color:floralwhite'>
+      <h3>Note Sharing</h3>
+    </div>
+    <div class="card col-md text-center" style='background-color:floralwhite'>
+      <h3>User Details</h3>
+    </div>
+  </div>
+</div>
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+  <nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="">Purush</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Tharun</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#one">one</a>
+        <a class="dropdown-item" href="#two">two</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#three">three</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <h4 id="fat">Purush</h4>
+  <h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team1.jpg" alt="purushotham" style="width:100%">
+      <div class="container">
+        <h2>Purushotham Reddy</h2>
+        <p class="title">Team lead</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>purushotham@email.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="mdo">Tharun</h4>
+  
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Tharunsai" style="width:100%">
+      <div class="container">
+        <h2>Tharunsai Reddy</h2>
+        <p class="title">Member</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>tharunsai@email.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="one">one</h4>
+ 
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="Reddy" style="width:100%">
+      <div class="container">
+        <h2>Reddy</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>reddy123@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <h4 id="two">two</h4>
+  <p>...</p>
+  <h4 id="three">three</h4>
+  <p>...</p>
+</div>
+</div>
+
+
+ <h3>This is about page</h3>
+</div>
+</div>
+</div>">
+  <div style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100%">
+
+<!-- Background image -->
+<div class="container">
+  {% if messages %}
+       {% for j in messages %}
+         <div class="alert alert-{{j.tags}} alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+         {{j}}
+          
+
+
+       {% endfor %}
+  {% endif %}
+  <div class="row mt-4">
+    <div class="card col-md mx-2 text-center" style='background-color:floralwhite'>
+      <h3>Note Sharing</h3>
+    </div>
+    <div class="card col-md text-center" style='background-color:floralwhite'>
+      <h3>User Details</h3>
+    </div>
+  </div>
+</div>
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+  <nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="">Purush</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Tharun</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#one">one</a>
+        <a class="dropdown-item" href="#two">two</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#three">three</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <h4 id="fat">Purush</h4>
+  <h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team1.jpg" alt="purushotham" style="width:100%">
+      <div class="container">
+        <h2>Purushotham Reddy</h2>
+        <p class="title">Team lead</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>purushotham@email.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="mdo">Tharun</h4>
+  
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Tharunsai" style="width:100%">
+      <div class="container">
+        <h2>Tharunsai Reddy</h2>
+        <p class="title">Member</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>tharunsai@email.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="one">one</h4>
+ 
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="Reddy" style="width:100%">
+      <div class="container">
+        <h2>Reddy</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>reddy123@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <h4 id="two">two</h4>
+  <p>...</p>
+  <h4 id="three">three</h4>
+  <p>...</p>
+</div>
+</div>
+
+<div class="container-fluid">
+  <div class="bg-image"
+style="background-image: url('https://images.all-free-download.com/images/graphicthumb/forest_513163.jpg');
+      height: 50vh">
+</div>
+ <h3>This is about page</h3>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+

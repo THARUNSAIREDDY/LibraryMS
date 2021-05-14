@@ -1,0 +1,22 @@
+{% extends 'html/base.html' %}
+{% block title %}Reset Password confirm Done{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-5 col-md-4 mx-auto p-2 shadow-lg empty-2">
+		<div class="card-body">
+			<h3 class="'bg-dark text-center text-light empty-2 p-2 border rounded">Reset password confirmation required ! </h3>
+			<div class="card-body" >
+				<h3>  Reset password confirmed  ! !  </h3>
+			</div>
+			<form method="POST">
+				{% csrf_token %}
+				
+				{{form.as_p}}
+					
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+{% endblock %}
